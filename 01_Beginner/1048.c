@@ -76,7 +76,7 @@ int main(void) {
     }
     else
     {
-        i = 0.15;
+        i = 0.04;
     }
 
     // Resultados
