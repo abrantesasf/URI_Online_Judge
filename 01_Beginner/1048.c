@@ -50,15 +50,14 @@ More Info   :
 */
 int main(void) {
     // Declara variáveis
-    double sv = 0.0;
-    double i  = 0.0;
-    char a = '%';
+    float sv = 0.0;
+    float i  = 0.0;
 
     // Obtém dados
-    scanf("%lf", &sv);
+    scanf("%f", &sv);
 
     // Calcula a taxa:
-    if ( sv < 400.01 )
+    if ( sv >= 0.00 && sv < 400.01 )
     {
         i = 0.15;
     }
@@ -80,9 +79,9 @@ int main(void) {
     }
 
     // Resultados
-    printf("Novo salario: %.2lf\n", sv * (1.0 + i));
-    printf("Reajuste ganho: %.2lf\n", sv * i);
-    printf("Em percentual: %d %c\n", (int) (i * 100), a);
+    printf("Novo salario: %.2f\n", sv * (1.0 + i));
+    printf("Reajuste ganho: %.2f\n", sv * i);
+    printf("Em percentual: %d %%\n", (int) (i * 100));
 
     // Retorna:
     return rSucesso;
